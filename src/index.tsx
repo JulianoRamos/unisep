@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root'),
-);
+import { makeServer } from './services/miragejs';
+
+makeServer();
+
+ReactDOM.render(<App />, document.getElementById('root'));
